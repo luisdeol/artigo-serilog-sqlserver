@@ -29,6 +29,7 @@ namespace ArtigoSerilogSql.API
                 };
             
             Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information()
                 .WriteTo.MSSqlServer(
                     connectionString: connectionString,
                     tableName: nomeTabela,
